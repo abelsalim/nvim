@@ -29,6 +29,17 @@ vim.api.nvim_create_autocmd("FileType", {
   end,
 })
 
+vim.api.nvim_create_autocmd("VimEnter", {
+  callback = function()
+    local pasta_remota = "/home/suporte/base" 
+
+    if vim.fn.isdirectory(pasta_remota) == 1 then
+      vim.cmd("cd " .. pasta_remota)
+      vim.notify("🚀 Ambiente Remoto: Entrando em " .. pasta_remota, vim.log.levels.INFO)
+    end
+  end,
+})
+
 -- Carrega Configurações Básicas e Atalhos
 require("core.options")
 require("core.keymaps")

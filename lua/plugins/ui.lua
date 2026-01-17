@@ -85,16 +85,5 @@ return {
 
   -- Indent Blankline
   { "lukas-reineke/indent-blankline.nvim", main = "ibl", opts = {} },
-
-  {
-    "amitds1997/remote-nvim.nvim",
-    version = "*",
-    dependencies = {
-      "nvim-lua/plenary.nvim",
-      "muniftanjim/nui.nvim",
-      "nvim-telescope/telescope.nvim",
-    },
-    config = true,
-  }
 }
 
